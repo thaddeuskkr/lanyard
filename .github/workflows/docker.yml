@@ -2,12 +2,10 @@ name: Docker Build & Push CI
 
 on:
   push:
-    branches: [main, selfbuilt]
     paths-ignore:
       - "README.md"
       - "LICENSE"
   pull_request:
-    branches: [main, selfbuilt]
     paths:
       - "config/**"
       - "lib/**"
