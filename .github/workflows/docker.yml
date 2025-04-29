@@ -117,7 +117,7 @@ jobs:
           set: |
             *.tags=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
             *.platform=${{ matrix.platform }}
-            *.output=type=image,push-by-digest=true,name-canonical=true,push${{ github.event_name != 'pull_request' }}
+            *.output=type=image,push-by-digest=true,name-canonical=true,push=${{ github.event_name != 'pull_request' }}
 
       - name: Export digest
         run: |
