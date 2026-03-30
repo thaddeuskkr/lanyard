@@ -2,12 +2,12 @@ name: Docker Build & Push CI
 
 on:
   push:
-    branches: [main]
+    branches: [selfbuilt]
     paths-ignore:
       - "README.md"
       - "LICENSE"
   pull_request:
-    branches: [main]
+    branches: [selfbuilt]
     paths:
       - "config/**"
       - "lib/**"
@@ -21,7 +21,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: phineas/lanyard
+  IMAGE_NAME: thaddeuskkr/lanyard
   PLATFORM_PAIR: ""
 
 jobs:
